@@ -17,4 +17,7 @@
     "url": "https://github.com/hjunyoung/wetube/issues"
   },
   "homepage": "https://github.com/hjunyoung/wetube#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
 }
