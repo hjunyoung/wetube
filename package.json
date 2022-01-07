@@ -19,5 +19,9 @@
   "homepage": "https://github.com/hjunyoung/wetube#readme",
   "dependencies": {
     "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.7"
   }
 }
