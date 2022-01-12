@@ -14,7 +14,7 @@ const handleHome = (req, res) => {
 };
 
 app.use(logger);
-app.get('/', handleHome);
+app.use(express.urlencoded({ extended: true }));
 
 const handleListening = () => {
   console.log(`✅ Server listening on port http://localhost:${PORT}`);
