@@ -1,0 +1,7 @@
+extends layout.pug
+
+block content
+  h4 Change title of video
+  form(action="", method="POST")
+    input(type="text", name="title", placeholder="Video Title", value=`${video.title}`, required) 
+    input(type="submit", value="Save")
