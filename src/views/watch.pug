@@ -1,5 +1,9 @@
 extends layout.pug
 
 block content
-  h3 #{video.views} #{video.views === 1 ? "view" : "views"}
+  div 
+    p=video.description
+    small #{video.views || 0 } #{video.views === 1 ? "view" : "views"}
+    br
+    small=video.createdAt
   a(href=`${video.id}/edit`) Edit Video &rarr;
