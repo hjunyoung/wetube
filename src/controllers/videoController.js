@@ -45,7 +45,7 @@ export const postUpload = async (req, res) => {
       title,
       description,
       hashtags: hashtags.split(',').map((tag) => {
-        tag.trim().startsWith('#') ? tag.trim() : `#${tag.trim()}`;
+        return tag.trim().startsWith('#') ? tag.trim() : `#${tag.trim()}`;
       }),
     });
     return res.redirect('/');
