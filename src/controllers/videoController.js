@@ -1,5 +1,8 @@
-export const trending = (req, res) => {
-  return res.render('home', { pageTitle: 'Home' });
+import Video from '../models/Video';
+
+export const trending = async (req, res) => {
+  const videos = await Video.find({});
+  return res.render('home', { pageTitle: 'Home', videos });
 };
 
 export const watch = (req, res) => {
