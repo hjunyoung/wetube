@@ -1,3 +1,4 @@
+import res from 'express/lib/response';
 import Video from '../models/Video';
 
 export const trending = async (req, res) => {
@@ -71,4 +72,12 @@ export const postUpload = async (req, res) => {
       errorMessage: error._message,
     });
   }
+};
+
+export const deleteVideo = async (req, res) => {
+  const {
+    params: { id },
+  } = req;
+  await Video.findByIdAndDelete(id);
+  return res.redirect('/');
 };
