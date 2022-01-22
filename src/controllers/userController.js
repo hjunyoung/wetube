@@ -9,7 +9,7 @@ export const postJoin = async (req, res) => {
   const pageTitle = 'Join';
 
   if (password !== password2) {
-    return res.render('join', {
+    return res.status(400).render('join', {
       pageTitle,
       errorMessage: 'Password confirmation does not match.',
     });
@@ -17,7 +17,7 @@ export const postJoin = async (req, res) => {
 
   const exists = await User.exists({ username, email });
   if (exists) {
-    return res.render('join', {
+    return res.status(400).render('join', {
       pageTitle,
       errorMessage: 'Both Username and Email already taken.',
     });
@@ -25,7 +25,7 @@ export const postJoin = async (req, res) => {
 
   const usernameExists = await User.exists({ username });
   if (usernameExists) {
-    return res.render('join', {
+    return res.status(400).render('join', {
       pageTitle,
       errorMessage: 'Username already taken.',
     });
@@ -33,7 +33,7 @@ export const postJoin = async (req, res) => {
 
   const emailExists = await User.exists({ email });
   if (emailExists) {
-    return res.render('join', {
+    return res.status(400).render('join', {
       pageTitle,
       errorMessage: 'Email already taken.',
     });
