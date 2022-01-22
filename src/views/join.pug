@@ -1,8 +1,10 @@
 extends layout 
 
 block content 
+  if errorMessage
+    span=errorMessage
   form(action="", method="post") 
-    input(name="name", type="text",  placeholder="Name", required)
+    input(name="name", type="text",  placeholder="Name")
     input(name="email", type="email",  placeholder="E-mail", required)
     input(name="username", type="text",  placeholder="Username", required)
     input(name="password", type="password",  placeholder="Password", required)
