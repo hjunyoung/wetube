@@ -1,4 +1,3 @@
-import res from 'express/lib/response';
 import Video from '../models/Video';
 
 export const trending = async (req, res) => {
