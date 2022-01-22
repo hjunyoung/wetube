@@ -1,0 +1,11 @@
+extends layout 
+include mixins/video
+
+block content 
+  form(method="GET")
+    input(type="text", name="keyword", placeholder="Search by title")
+    input(type="submit", value="Search")
+
+  div
+    each video in videos 
+      +video(video)
