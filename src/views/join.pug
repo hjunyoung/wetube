@@ -1,0 +1,11 @@
+extends layout 
+
+block content 
+  form(action="", method="post") 
+    input(name="name", type="text",  placeholder="Name", required)
+    input(name="email", type="email",  placeholder="E-mail", required)
+    input(name="username", type="text",  placeholder="Username", required)
+    input(name="password", type="password",  placeholder="Password", required)
+    input(name="password2", type="password",  placeholder="Confirm password", required)
+    input(name="location", type="text",  placeholder="Location")
+    input(type="submit", value="Create Account")
